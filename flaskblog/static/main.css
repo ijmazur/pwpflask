@@ -1,5 +1,8 @@
 body {
-  background: #fafafa;
+  background: url(https://pyxis.nymag.com/v1/imgs/8f8/e12/51b54d13d65d8ee3773ce32da03e1fa220-dogecoin.rhorizontal.w700.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  opacity: 0.5;
   color: #333333;
   margin-top: 5rem;
 }
