@@ -15,8 +15,3 @@ def home():
 @main.route("/about")
 def about():
     return render_template('about.html', title='About')
-
-
-@main.route("/weather")
-def weather():
-    return render_template('weather.html', title='Current Weather')

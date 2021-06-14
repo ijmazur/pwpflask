@@ -1,5 +1,11 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h1>Current Weather</h1>
-    <p>TODO page.</p>
+<div id="weatherResults">
+    <h3 class="weatherFam">Weather in {{ location }}, {{ country }}</h3>
+    <h6 class="weatherFam6">Lat:{{ lat }} | Long: {{ lon }}</h6>
+    <h2 class="weatherFam">{{ temp }}°C</h2>
+    <h3 class="weatherFam">{{ weathers }}</h3>
+    <h4 class="weatherFam4">Feels like: {{ feels_like }}°C</h4>
+    <h6 class="weatherFam6">Humidity: {{ humidity }}%, Pressure: {{ pressure }}mb</h6>
+</div>
 {% endblock content %}

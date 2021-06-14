@@ -1,5 +1,5 @@
 body {
-  background: #CAA13E;
+  background: #edd592;
   color: #222222;
   margin-top: 6rem;
 }
@@ -18,11 +18,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .site-header .navbar-nav .nav-link {
-  color: #CAA13E;
+  color: #edd592;
 }
 
 .site-header .navbar-nav .nav-link:hover {
-  color: #CAA13E;
+  color: #edd592;
 }
 
 .site-header .navbar-nav .nav-link.active {
@@ -30,8 +30,58 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
+.h2weather {
+  padding-left: 24px;
+}
+
+#weatherResults {
+  background-color: #553E26;
+  font-size: 24px;
+  padding: 40px;
+  display: inline-block;
+  text-align: center;
+  margin: 40px;
+  border-radius: 10px;
+}
+
+.weatherFam {
+  color: #edd592;
+  font-size: 48px;
+}
+
+.weatherFam4 {
+  color: #edd592;
+  font-size: 22px;
+}
+
+.weatherFam6 {
+  color: #edd592;
+  font-size: 18px;
+}
+
+#weatherForm {
+  font-size: 22px;
+  padding-left: 20px;
+}
+
+.weatherText{
+  font-size: 24px;
+}
+
+#weatherSubmit {
+  color: white;
+  background-color: #553E26;
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+#weatherSubmit:hover {
+    cursor: pointer;
+}
+
 .content-section .list-group-item-color {
-  background-color: #CAA13E;
+  background-color: #edd592;
   border-top: 1px solid #000000;
   border-left-color: #000000;
   border-right-color: #000000;
@@ -43,7 +93,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .content-section {
-  background: #CAA13E;
+  background: #edd592;
   padding: 10px 20px;
   border: 1px solid #252211;
   border-radius: 3px;
