@@ -1,48 +1,117 @@
 body {
-  background: #fafafa;
-  color: #333333;
-  margin-top: 5rem;
+  background: #edd592;
+  color: #222222;
+  margin-top: 6rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #444444;
+  color: #000000;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
 }
 
 .bg-steel {
-  background-color: #5f788a;
+  background-color: #553E26;
 }
 
 .site-header .navbar-nav .nav-link {
-  color: #cbd5db;
+  color: #edd592;
 }
 
 .site-header .navbar-nav .nav-link:hover {
-  color: #ffffff;
+  color: #edd592;
 }
 
 .site-header .navbar-nav .nav-link.active {
+  font-size: 3rem;
   font-weight: 500;
 }
 
+.h2weather {
+  padding-left: 24px;
+}
+
+#weatherResults {
+  background-color: #553E26;
+  font-size: 24px;
+  padding: 40px;
+  display: inline-block;
+  text-align: center;
+  margin: 40px;
+  border-radius: 10px;
+}
+
+.weatherFam {
+  color: #edd592;
+  font-size: 48px;
+}
+
+.weatherFam4 {
+  color: #edd592;
+  font-size: 22px;
+}
+
+.weatherFam6 {
+  color: #edd592;
+  font-size: 18px;
+}
+
+#weatherForm {
+  font-size: 22px;
+  padding-left: 20px;
+}
+
+.weatherText{
+  font-size: 24px;
+}
+
+#weatherSubmit {
+  color: white;
+  background-color: #553E26;
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+#weatherSubmit:hover {
+    cursor: pointer;
+}
+
+.content-section .list-group-item-color {
+  background-color: #edd592;
+  border-top: 1px solid #000000;
+  border-left-color: #000000;
+  border-right-color: #000000;
+  border-bottom: 1px solid #000000;
+}
+
+.content-section .list-group-item-color a:hover {
+  background-color:
+}
+
 .content-section {
-  background: #ffffff;
+  background: #edd592;
   padding: 10px 20px;
-  border: 1px solid #dddddd;
+  border: 1px solid #252211;
   border-radius: 3px;
   margin-bottom: 20px;
 }
 
 .article-title {
-  color: #444444;
+  color: #252211;
 }
 
 a.article-title:hover {
-  color: #428bca;
+  color: #0081CD;
   text-decoration: none;
 }
 
 .article-content {
   white-space: pre-line;
+  color: #252211;
 }
 
 .article-img {
@@ -54,7 +123,7 @@ a.article-title:hover {
 .article-metadata {
   padding-bottom: 1px;
   margin-bottom: 4px;
-  border-bottom: 1px solid #e3e3e3
+  border-bottom: 1px solid #000000
 }
 
 .article-metadata a:hover {

@@ -8,17 +8,22 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css')}}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     {% if title %}
-        <title>Flask Tutorial Blog - {{ title }}</title>
+        <title>DOGE - {{ title }}</title>
     {% else %}
-        <title>Flask Tutorial Blog</title>
+        <title>DOGE</title>
     {% endif %}
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='profile_pics/favicon.ico') }}" />
 </head>
 <body>
     <header class="site-header">
         <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
             <div class="container">
-                <a class="navbar-brand mr-4" href="/">Flask Tutorial Blog</a>
+                <img class="rounded-circle logo" src="{{ url_for('static', filename='profile_pics/dogecoin-300.png') }}">
+                <a class="navbar-brand mr-4" href="/" style="color: #CAA13E"><b>DOGE</b></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -60,13 +65,12 @@
             </div>
             <div class="col-md-4">
                 <div class="content-section">
-                    <h3>Our Sidebar</h3>
-                    <p class='text-muted'>You can put any information here you'd like.
+                    <h3>Other Useful Info</h3>
+                    <p class='text-muted'>
                     <ul class="list-group">
-                    <li class="list-group-item list-group-item-light">Latest Posts</li>
-                    <li class="list-group-item list-group-item-light">Announcements</li>
-                    <li class="list-group-item list-group-item-light">Calendars</li>
-                    <li class="list-group-item list-group-item-light">etc</li>
+                    <a class="list-group-item list-group-item-color" href="{{ url_for('coins.doge')}}" style="color: #000000">DOGE</a>
+                    <a class="list-group-item list-group-item-color" href="{{ url_for('coins.btc')}}" style="color: #000000">BitCoin</a>
+                    <a class="list-group-item list-group-item-color" href="{{ url_for('weather.weather_dashboard')}}" style="color: #000000">Current Weather</a>
                 </ul>
                     </p>
                 </div>

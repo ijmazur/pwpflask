@@ -94,3 +94,4 @@ ENV/
 activate
 bulkpost.py
 tree-cli-script.py
+.ini

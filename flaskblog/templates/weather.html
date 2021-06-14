@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1 class="weatherText">Where do you wish to check the weather? Enter a city. </h1>
+    <form class="weatherText" id="weatherForm" action="{{ url_for('weather.get_results') }}" method="POST">
+        Input the city you are looking for: <input class="weatherText" id="weatherInput" type="text" name="cityname">
+        <br><input class="btn btn-outline-dark" id="submit" type="submit" name="submit" value="Submit">
+    </form>
+{% endblock content %}
