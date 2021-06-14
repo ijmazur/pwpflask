@@ -3,17 +3,19 @@ from flaskblog.models import Post
 import os
 import coinmarketcapapi
 import json
+import bs4
+import time
+import requests
 from types import SimpleNamespace
 
 coins = Blueprint('coins', __name__)
 cmc = coinmarketcapapi.CoinMarketCapAPI('64f799c2-1ea2-4b31-b23a-2f0e731203e8')
-
+cmc2 = requests.get('https://coinmarketcap.com/')
+soup = BeautifulSoup(cmc2.content, 'html.parser')
 
 @coins.route("/btc")
 def btc():
-    page = request.args.get('page', 1, type=int)
-    posts = Post.query.order_by(Post.date_posted.desc()).paginate(page=page, per_page=5)
-    return render_template('home.html', posts=posts)
+    return render_template('btc.html', title='BTC Info')
 
 
 @coins.route("/doge")

@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css')}}">
+
     {% if title %}
         <title>DOGE - {{ title }}</title>
     {% else %}
@@ -68,7 +69,7 @@
                     <ul class="list-group">
                     <a class="list-group-item list-group-item-color" href="{{ url_for('coins.btc')}}" style="color: #000000">BitCoin</a>
                     <a class="list-group-item list-group-item-color" href="{{ url_for('coins.doge')}}" style="color: #000000">DOGE</a>
-                    <a class="list-group-item list-group-item-color" href="{{ url_for('main.home')}}" style="color: #000000">Current Weather</a>
+                    <a class="list-group-item list-group-item-color" href="{{ url_for('main.weather')}}" style="color: #000000">Current Weather</a>
                 </ul>
                     </p>
                 </div>
