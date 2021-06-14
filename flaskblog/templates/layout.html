@@ -20,8 +20,8 @@
     <header class="site-header">
         <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
             <div class="container">
-                <img src="{{ url_for('static', filename='profile_pics/dogecoin-300.png') }}; max-width:50%">
-                <a class="navbar-brand mr-4" href="/">DOGE</a>
+                <img class="rounded-circle logo" src="{{ url_for('static', filename='profile_pics/dogecoin-300.png') }}">
+                <a class="navbar-brand mr-4" href="/" style="color: #CAA13E"><b>DOGE</b></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -66,9 +66,9 @@
                     <h3>Coin Info</h3>
                     <p class='text-muted'>
                     <ul class="list-group">
-                    <a class="list-group-item list-group-item-light" href="{{ url_for('posts.new_post')}}">BitCoin</a>
-                    <a class="list-group-item list-group-item-light" href="{{ url_for('posts.new_post')}}">DOGE</a>
-                    <a class="list-group-item list-group-item-light" href="{{ url_for('posts.new_post')}}">Current Weather</a>
+                    <a class="list-group-item list-group-item-color" href="{{ url_for('coins.btc')}}" style="color: #000000">BitCoin</a>
+                    <a class="list-group-item list-group-item-color" href="{{ url_for('coins.doge')}}" style="color: #000000">DOGE</a>
+                    <a class="list-group-item list-group-item-color" href="{{ url_for('main.home')}}" style="color: #000000">Current Weather</a>
                 </ul>
                     </p>
                 </div>

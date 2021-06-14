@@ -1,51 +1,67 @@
 body {
-  background: url(https://pyxis.nymag.com/v1/imgs/8f8/e12/51b54d13d65d8ee3773ce32da03e1fa220-dogecoin.rhorizontal.w700.jpg);
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  opacity: 0.5;
-  color: #333333;
-  margin-top: 5rem;
+  background: #CAA13E;
+  color: #222222;
+  margin-top: 6rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #444444;
+  color: #000000;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
 }
 
 .bg-steel {
-  background-color: #5f788a;
+  background-color: #553E26;
 }
 
 .site-header .navbar-nav .nav-link {
-  color: #cbd5db;
+  color: #CAA13E;
 }
 
 .site-header .navbar-nav .nav-link:hover {
-  color: #ffffff;
+  color: #CAA13E;
 }
 
 .site-header .navbar-nav .nav-link.active {
+  font-size: 3rem;
   font-weight: 500;
 }
 
+.content-section .list-group-item-color {
+  background-color: #CAA13E;
+  border-top: 1px solid #000000;
+  border-left-color: #000000;
+  border-right-color: #000000;
+  border-bottom: 1px solid #000000;
+}
+
+.content-section .list-group-item-color a:hover {
+  background-color:
+}
+
 .content-section {
-  background: #ffffff;
+  background: #CAA13E;
   padding: 10px 20px;
-  border: 1px solid #dddddd;
+  border: 1px solid #252211;
   border-radius: 3px;
   margin-bottom: 20px;
 }
 
 .article-title {
-  color: #444444;
+  color: #252211;
 }
 
 a.article-title:hover {
-  color: #428bca;
+  color: #0081CD;
   text-decoration: none;
 }
 
 .article-content {
   white-space: pre-line;
+  color: #252211;
 }
 
 .article-img {
@@ -57,7 +73,7 @@ a.article-title:hover {
 .article-metadata {
   padding-bottom: 1px;
   margin-bottom: 4px;
-  border-bottom: 1px solid #e3e3e3
+  border-bottom: 1px solid #000000
 }
 
 .article-metadata a:hover {
