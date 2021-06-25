@@ -2,6 +2,7 @@
 {% block content %}
     <h1 class="mb-3">Posts by {{ user.username }} ({{ posts.total }})</h1>
     {% for post in posts.items %}
+    <!-- looping through posts by the user, showing them -->
         <article class="media content-section">
             <img class="rounded-circle article-img" src="{{url_for('static', filename='profile_pics/' + post.author.image_file)}}">
             <div class="media-body">
@@ -14,6 +15,7 @@
             </div>
         </article>
     {% endfor %}
+    <!-- iter_pages = left and right edge = how many pages show on edges, current = how many pages from current will show -->
     {% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
         {% if page_num %}
             {% if posts.page == page_num %}

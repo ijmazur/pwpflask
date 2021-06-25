@@ -4,6 +4,7 @@ from flaskblog.models import Post
 main = Blueprint('main', __name__)
 
 
+# home route, show pages, start with page 1, show posts in descending order, paginate the page, 5 posts per page
 @main.route("/")
 @main.route("/home")
 def home():
