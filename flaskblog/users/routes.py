@@ -5,9 +5,16 @@ from flaskblog.models import User, Post
 from flaskblog.users.forms import RegistrationForm, LoginForm, UpdateAccountForm, RequestResetForm, ResetPasswordForm
 from flaskblog.users.utils import save_picture, send_reset_email
 
+# app = Flask(__name__)
 users = Blueprint('users', __name__)
 
 
+# if user is logged in, and goes to /register, redirect to home
+# otherwise form needs to be filled in
+# we hash the password and then decode it as utf-8
+# add the user and commit
+# flash a message saying that its done
+# at the end if creating account is successful we redirect the user to login page
 @users.route("/register", methods=['GET', 'POST'])
 def register():
     if current_user.is_authenticated:
@@ -23,6 +30,8 @@ def register():
     return render_template('register.html', title='Register', form=form)
 
 
+# if info is legit and validated on submission
+# if email and password hash is correct, the user is logged in, redirected to home
 @users.route("/login", methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
@@ -45,6 +54,8 @@ def logout():
     return redirect(url_for('main.home'))
 
 
+# validation of input, possibility to update user information and picture
+# showing current email and username if nothing to update
 @users.route("/account", methods=['GET', 'POST'])
 @login_required
 def account():
@@ -65,6 +76,8 @@ def account():
     return render_template('account.html', title='Account', image_file=image_file, form=form)
 
 
+# show posts all users have, if we get user we spit out the data, otherwise 404
+# 5 posts per page, pagination and order by date posted by descending
 @users.route("/user/<string:username>")
 def user_posts(username):
     page = request.args.get('page', 1, type=int)
@@ -75,6 +88,14 @@ def user_posts(username):
     return render_template('user_posts.html', posts=posts, user=user)
 
 
+# send_reset_email (utils.py)
+# random hex from secrets is a base for randomising name of picture, so it never hurts our db
+# we save the file with same extension as its uploaded (os - needed for that)
+# the filename.extension is split and we save the extension
+# we need to use _, as variable not used in our application (f_name)
+# we join the two in picture_fn = hexname + extension
+# picture_path = root app(package directory) and static/profile_pics and we add te picture filename we created
+# the picture cant be bigger than 125x125
 @users.route("/reset_password", methods=['GET', 'POST'])
 def reset_request():    # enter email to reset
     if current_user.is_authenticated:
@@ -88,6 +109,8 @@ def reset_request():    # enter email to reset
     return render_template('reset_request.html', title='Reset Password', form=form)
 
 
+# verification of token if correct we allow to fill out form with new password
+# otherwise flash a message that token is expired or invalid
 @users.route("/reset_password/<token>", methods=['GET', 'POST'])
 def reset_token(token):     # enter token to reset
     if current_user.is_authenticated:

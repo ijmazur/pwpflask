@@ -13,6 +13,9 @@ login_manager.login_message_category = 'info'
 mail = Mail()
 
 
+# this function takes as arg what configuration object we to use for our application
+# this is the import from Config class we did in config.py
+# extensions remain outside, rest gets inside.
 def create_app(config_class=Config):
     app = Flask(__name__)
     app.config.from_object(Config)

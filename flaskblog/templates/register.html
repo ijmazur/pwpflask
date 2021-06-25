@@ -6,6 +6,7 @@
             <fieldset class="form-group">
                 <legend class="border-dark border-bottom mb-4">Join Today</legend>
                 <div class="form-group">
+                    <!-- input username, if it doesnt match specified info then error -->
                     {{form.username.label(class="form-control-label")}}
                     {% if form.username.errors %}
                         {{form.username(class="form-control form-control-lg is-invalid")}}
@@ -14,6 +15,7 @@
                                 <span>{{ error }}</span>
                             {% endfor %}
                         </div>
+                    <!-- else if correct, proceed further on -->
                     {% else %}
                         {{form.username(class="form-control form-control-lg")}}
                     {% endif %}
